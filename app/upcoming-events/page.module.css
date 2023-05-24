@@ -1,0 +1,11 @@
+.textImageFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text {
+    font-size: 50px;
+    font-weight: bolder;
+    /* margin-right: 170px; */
+}

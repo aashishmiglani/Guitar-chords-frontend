@@ -59,11 +59,11 @@ export function fetchThunkData(pageNo, pageLimit) {
     }
 
 }
-export function fetchSearch(field, search) {
+export function fetchSearch(field, search, page, limit) {
     return async function fetchAllData(dispatch, getState) {
         dispatch(setStatus(STATEUES.LOADING))
         try {
-            let response = await axios.get(`http://localhost:8080/chords/?${field}=${search}`)
+            let response = await axios.get(`http://localhost:8080/chords/?${field}=${search}&page=${page}&limit=${limit}`)
             let data = await response.data
             dispatch(setSongDetailsData(data))
             dispatch(setStatus(STATEUES.IDLE))

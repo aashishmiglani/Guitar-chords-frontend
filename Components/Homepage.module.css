@@ -29,10 +29,8 @@
 
 }
 
-.borderWidth :hover {
-    transform: scale(150%);
 
-}
+
 
 .borderWidth {
     border-radius: 50%;
@@ -40,17 +38,26 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.borderWidth:hover {
+    transform: scale(110%);
+
+    /* transition-timing-function: cubic-bezier(.17, .67, .72, .67); */
+
+}
+
 .centerText {
     font-size: 50px;
     text-align: center;
     margin-bottom: 30px;
+
 }
 
 .centerSearch {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    flex-direction: column;
+
 }
 
 .searchBar {

@@ -36,12 +36,20 @@
 
 }
 
+.WidthFiveZeo {
+    width: 50%;
+}
+
 .songName {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-
+.Search {
+    display: flex;
+    width: 67%;
+    /* width: 170%; */
+}
 
 
 .songDetails :hover {
