@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchThunkData } from '@/Store/dataSlice'
 import { fetchSearch } from '@/Store/dataSlice'
 import styles from "./Search.module.css"
-// import { useRouter } from 'next/router';
 import Link from 'next/link';
 import axios from 'axios'
 import { MdOutlineNavigateNext } from 'react-icons/md';
@@ -18,7 +17,6 @@ const Search = () => {
     const { data, status } = useSelector((state) => state.allData)
     const [songData, setSongsData] = useState(data)
     const [input, setInput] = useState()
-    // const router = useRouter();
     const throttling = useRef(false)
     const [searchDropdown, setSearchDropdown] = useState()
     const inputRef = useRef()

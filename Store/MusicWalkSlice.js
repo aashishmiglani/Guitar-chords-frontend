@@ -12,19 +12,20 @@ const STATEUES = {
 }
 
 
-const fetchChordsSingleData = createSlice({
-    name: "singleSongChordData",
+const fetchMusicWalkData = createSlice({
+    name: "musicWalk",
     initialState: {
         data: [],
         status: STATEUES.IDLE
     },
     reducers: {
-        setChordsSongs(state, action) {
+        setMusicWalk(state, action) {
             state.data = action.payload
         },
         setStatus(state, action) {
             state.status = action.payload
-        }
+        },
+
 
 
     }
@@ -33,18 +34,18 @@ const fetchChordsSingleData = createSlice({
 
 
 
-export const { setChordsSongs, setStatus } = fetchChordsSingleData.actions
-export default fetchChordsSingleData.reducer
+export const { setMusicWalk, setStatus } = fetchMusicWalkData.actions
+export default fetchMusicWalkData.reducer
 
 
 
-export function fetchThunkChordsSongsData(payload) {
-    return async function fetchSongChords(dispatch, getState) {
+export function fetchMusicWalkDataThunk(pageNo, pageLimit) {
+    return async function MusicWalkData(dispatch, getState) {
         dispatch(setStatus(STATEUES.LOADING))
         try {
-            // let response = await axios.get(`localhost:8080/${payload}`)
+            let response = await axios.get(`http://localhost:8080/music-walk-event-registraion`)
             let data = await response.data
-            dispatch(setChordsSongs(data))
+            dispatch(setMusicWalk(data))
             dispatch(setStatus(STATEUES.IDLE))
 
         }
@@ -56,6 +57,8 @@ export function fetchThunkChordsSongsData(payload) {
     }
 
 }
+
+
 
 
 
