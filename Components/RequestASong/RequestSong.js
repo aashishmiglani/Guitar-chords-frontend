@@ -1,10 +1,31 @@
+"use client"
 import React from 'react'
 import styles from "./RequestSong.module.css"
 import Image from 'next/image';
 import 'typeface-abril-fatface'
+import { useState } from 'react';
+import axios from 'axios';
 
 
 const RequestSong = () => {
+    const [input, setInput] = useState({})
+
+    const postRequestASong = () => {
+
+        axios.post("http://localhost:8080/request-a-song", input).then((respone) => {
+            // alert("Sent!")
+            setInput()
+        })
+
+    }
+    const handleInput = (e) => {
+        setInput({
+            ...input, [e.target.name]: e.target.value
+        })
+
+    }
+    console.log("DVJD", input)
+
     return (
         <>
 
@@ -31,17 +52,8 @@ const RequestSong = () => {
                         height={350}
                         priority
                     />
-
-                    {/* <Image
-                        src="/1008-10084577_music-notes-vector-png-red-music-icon-png.png"
-                        alt="Vercel Logo"
-                        className={styles.musicNotesTwo}
-                        // className={"img-fluid"}
-                        width={200}
-                        height={350}
-                        priority
-                    /> */}
                 </div>
+
                 <div className={styles.formSubmit}>
                     <div className={styles.text} style={{ fontFamily: 'Abril Fatface, cursive' }}>
                         Request a Song
@@ -50,16 +62,16 @@ const RequestSong = () => {
                     <div className={styles.inputLabel}>
                         <div className={styles.songInput}>
                             <label>Song Name</label>
-                            <input className={styles.inputField} type='text' placeholder='Song Name'></input>
+                            <input onChange={handleInput} name="song_name" className={styles.inputField} type='text' placeholder='Song Name'></input>
                         </div>
 
                         <div className={styles.singerInput}>
                             <label>Singer Name</label>
-                            <input className={styles.inputField} type='text' placeholder='Singer Name'></input>
+                            <input onChange={handleInput} name="singer" className={styles.inputField} type='text' placeholder='Singer Name'></input>
                         </div>
                     </div>
                     <div className={styles.buttonDiv}>
-                        <button className={styles.buttonStyle}>Submit</button>
+                        <button className={styles.buttonStyle} onClick={postRequestASong}>Submit</button>
                     </div>
                 </div>
             </div>
