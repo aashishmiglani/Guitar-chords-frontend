@@ -41,7 +41,7 @@
     background-color: white;
     gap: 30px;
     /* border: 1px solid rgb(17s7, 177, 177); */
-    padding: 80px 20px;
+    padding: 30px;
     width: 50%;
     height: 50%;
     margin-right: 26px;
@@ -73,7 +73,7 @@
 .text {
     font-size: 40px;
     font-family: ab
-    /* text-align: center; */
+        /* text-align: center; */
 }
 
 .buttonStyle {
@@ -89,4 +89,91 @@
 
 .buttonDiv {
     margin: 24px 0px;
+}
+
+
+@media (min-width: 700px) and (max-width: 1216px) {
+    .musicNotes {
+        height: 200px;
+        width: 200px;
+    }
+
+    .musicNotesTwo {
+        height: 200px;
+        width: 150px;
+    }
+
+    .songInput,
+    .singerInput {
+        font-size: 12px;
+    }
+
+    .text {
+        font-size: 30px;
+
+    }
+
+    .formSubmit {
+        padding: 20px;
+    }
+
+    /* .buttonDiv {
+        margin: 15px 0px;
+    } */
+    .buttonStyle {
+        font-size: 12px;
+        padding: 0px;
+    }
+
+
+}
+
+
+@media (min-width: 501px) and (max-width: 844px) {
+    .musicNotes {
+        height: 150px;
+        width: 150px;
+    }
+
+    .musicNotesTwo {
+        height: 150px;
+        width: 114px;
+    }
+
+    .songInput,
+    .singerInput {
+        font-size: 8px;
+    }
+
+    .text {
+        font-size: 20px;
+
+    }
+
+    .formSubmit {
+        padding: 10px;
+    }
+
+    /* .buttonDiv {
+        margin: 15px 0px;
+    } */
+    .buttonStyle {
+        font-size: 7px;
+        padding: 0px;
+    }
+
+
+}
+
+
+
+@media (min-width: 201px) and (max-width: 500px) {
+    .musicNotes {
+        display: none;
+    }
+
+    .musicNotesTwo {
+        display: none;
+
+    }
 }

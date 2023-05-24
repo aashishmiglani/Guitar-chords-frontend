@@ -12,19 +12,20 @@ const STATEUES = {
 }
 
 
-const fetchSingleDataSlice = createSlice({
-    name: "singleData",
+const fetchOpenMicData = createSlice({
+    name: "openMicRegisterion",
     initialState: {
         data: [],
         status: STATEUES.IDLE
     },
     reducers: {
-        setSingleHarryPotterData(state, action) {
+        setOpenMicRegistration(state, action) {
             state.data = action.payload
         },
         setStatus(state, action) {
             state.status = action.payload
-        }
+        },
+
 
 
     }
@@ -33,18 +34,18 @@ const fetchSingleDataSlice = createSlice({
 
 
 
-export const { setSingleHarryPotterData, setStatus } = fetchSingleDataSlice.actions
-export default fetchSingleDataSlice.reducer
+export const { setOpenMicRegistration, setStatus } = fetchOpenMicData.actions
+export default fetchOpenMicData.reducer
 
 
 
-export function fetchThunkSingleData(payload) {
-    return async function fetchAllData(dispatch, getState) {
+export function fetchOpenMicDataThunk(pageNo, pageLimit) {
+    return async function fetchAllOpenMicData(dispatch, getState) {
         dispatch(setStatus(STATEUES.LOADING))
         try {
-            // let response = await axios.get(`localhost:8080/${payload}`)
+            let response = await axios.get(`http://localhost:8080/open-mic-event-registraion`)
             let data = await response.data
-            dispatch(setSingleHarryPotterData(data))
+            dispatch(setOpenMicRegistration(data))
             dispatch(setStatus(STATEUES.IDLE))
 
         }
@@ -56,6 +57,8 @@ export function fetchThunkSingleData(payload) {
     }
 
 }
+
+
 
 
 
