@@ -1,0 +1,65 @@
+.songDetails {
+    border-radius: 15px;
+    margin: 20px 10px;
+    /* margin-bottom: 20px; */
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    /* background-color: #0b5ed7; */
+    /* /* background-color: #0b5ed7; */
+
+}
+
+
+
+@media (min-width: 700px) and (max-width: 1120px) {
+    .songDetails {
+        font-size: 10px;
+        /* background-color: #0b5ed7; */
+        /* /* background-color: #0b5ed7; */
+
+    }
+
+    .textItem {
+        font-size: 10px;
+    }
+
+}
+
+
+.textItem {
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.songName {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+
+
+
+.songDetails :hover {
+    /* border: 1px solid grey; */
+    /* margin-bottom: 20px; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: white;
+    background-color: #0b5ed7; */
+    /* /* background-color: #0b5ed7; */
+
+}
+
+.textColor {
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+}
+
+.textColor:hover {
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+}

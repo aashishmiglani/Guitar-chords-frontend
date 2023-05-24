@@ -1,14 +1,13 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Search from './Search'
 import Image from 'next/image';
 import styles from "./Homepage.module.css"
+import RequestSong from './RequestASong/RequestSong';
 
 
 export const Homepage = () => {
     return (
         <>
-            <Navbar />
             <div className={styles.flex_Ho} >
                 <div>
                     <Image
@@ -31,30 +30,87 @@ export const Homepage = () => {
 
 
             <div className={styles.centerImages}>
-                <Image src="/Recording-pana.png"
-                    alt="jhb"
-                    className={styles.borderWidth}
-                    width={100}
-                    height={100}
-                    priority />
 
 
-                <Image src="/Playlist-rafiki.png"
-                    alt="jhb"
-                    className={styles.borderWidth}
-                    width={100}
-                    height={100}
-                    priority />
+                <div className={styles.textImageFlex} >
+                    <Image src="/Recording-pana.png"
+                        alt="jhb"
+                        className={styles.borderWidth}
+                        width={120}
+                        height={120}
+                        priority />
+                    <h4 className={styles.text}>
+                        Learn Music
+                    </h4>
+                </div>
+
+                <div className={styles.textImageFlex} >
+                    <Image src="/Playlist-rafiki.png"
+                        alt="jhb"
+                        className={styles.borderWidth}
+                        width={120}
+                        height={120}
+                        priority />
+                    <h4 className={styles.text}>
+                        Learn Music
+                    </h4>
+                </div>
 
 
-                <Image src="/Boombox-pana.png"
-                    alt="jhb"
-                    className={styles.borderWidth}
-                    width={100}
-                    height={100}
-                    priority />
+                <div className={styles.textImageFlex} >
+                    <Image src="/Walking around-amico.svg"
+                        alt="jhb"
+                        className={styles.borderWidth}
+                        width={120}
+                        height={120}
+                        priority />
+                    <h4 className={styles.text}>
+                        Music Walk
+                    </h4>
+
+                </div>
+
+
+                <div className={styles.textImageFlex} >
+                    <Image src="/Instagram Video Streaming-pana.svg"
+                        alt="jhb"
+                        className={styles.borderWidth}
+                        width={120}
+                        height={120}
+                        priority />
+                    <h4 className={styles.text}>
+                        Follow Our Socials
+                    </h4>
+
+                </div>
+
+
+
+                <div className={styles.textImageFlex} >
+                    <Image src="/Headphone-cuate.svg"
+                        alt="jhb"
+                        className={styles.borderWidth}
+                        width={120}
+                        height={120}
+                        priority />
+                    <h4 className={styles.text}>
+                        Enjoy Online  Music
+                    </h4>
+
+                </div>
+
+
 
             </div>
+            <div className={styles.centerText}>Search for Songs</div>
+            <div className={styles.centerSearch}>
+                <div className={styles.searchBar}>
+
+                    <Search />
+                </div>
+            </div>
+
+            <RequestSong />
 
 
 
