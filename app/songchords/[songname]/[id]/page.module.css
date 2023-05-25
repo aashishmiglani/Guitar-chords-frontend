@@ -1,0 +1,41 @@
+.flexParent {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    align-items: center;
+    /* background-color: #0b5ed7; */
+    padding: 30px;
+}
+
+.frame {
+    margin-right: 126px;
+}
+
+.songSummary {
+    color: rgb(0, 0, 0);
+}
+
+.contenet {}
+
+.conetntStyle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+}
+
+.songDeatil {
+    color: rgb(0, 0, 0);
+}
+
+.songName {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #0b5ed7;
+    padding: 15px;
+    color: white;
+    border-radius: 100px;
+}

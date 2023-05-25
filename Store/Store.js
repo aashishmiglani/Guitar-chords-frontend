@@ -3,6 +3,8 @@ import { configureStore } from '@reduxjs/toolkit'
 import dataReducer from "./dataSlice.js"
 import singleDataReducer from "./singleDataSlice.js"
 import openMicReducer from "./openMicSlice.js"
+import fetchMusicWalkData from "./MusicWalkSlice.js"
+import fetchChordsSingleData from "./singleDataSlice.js"
 
 
 
@@ -11,7 +13,9 @@ export const store = configureStore({
     reducer: {
         allData: dataReducer,
         singleData: singleDataReducer,
-        openMicRegisterion: openMicReducer
+        openMicRegisterion: openMicReducer,
+        musicWalk: fetchMusicWalkData,
+        singleSongChordData: fetchChordsSingleData
 
 
 

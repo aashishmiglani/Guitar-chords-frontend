@@ -7,5 +7,19 @@
 .text {
     font-size: 50px;
     font-weight: bolder;
-    /* margin-right: 170px; */
+    margin-bottom: 38px;
+}
+
+.imageText {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    align-items: center;
+}
+
+.socialLogoText {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
 }
