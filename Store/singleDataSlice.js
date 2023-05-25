@@ -42,9 +42,12 @@ export function fetchThunkChordsSongsData(payload) {
     return async function fetchSongChords(dispatch, getState) {
         dispatch(setStatus(STATEUES.LOADING))
         try {
-            // let response = await axios.get(`localhost:8080/${payload}`)
+            let response = await axios.get(`http://localhost:8080/chords-files-data/`)
             let data = await response.data
-            dispatch(setChordsSongs(data))
+            let filterId = data.filter((item) => {
+                return item.chord_id._id === payload
+            })
+            dispatch(setChordsSongs(filterId))
             dispatch(setStatus(STATEUES.IDLE))
 
         }

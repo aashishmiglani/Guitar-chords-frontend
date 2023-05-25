@@ -30,7 +30,6 @@ const page = () => {
 
 
 
-  console.log("JDHJGID", data)
 
 
   const clickMe = () => {

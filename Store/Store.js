@@ -15,7 +15,7 @@ export const store = configureStore({
         singleData: singleDataReducer,
         openMicRegisterion: openMicReducer,
         musicWalk: fetchMusicWalkData,
-        musicWalk: fetchChordsSingleData
+        singleSongChordData: fetchChordsSingleData
 
 
 
